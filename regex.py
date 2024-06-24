@@ -43,15 +43,6 @@ if __name__ == "__main__":
     with open(replacement_file, "r") as f:
         replacement = json.load(f)
         tokens = tokenise(input_text)
-        replacement = {
-            "he": "she",
-            "He": "She",
-            "his": "hers",
-            "His": "Hers",
-            "him": "her",
-            "Him": "Her"
-        }
-        tokens = tokenise(input_text)
         replace_tokens(tokens, replacement)
         print("")
         print("Output below")
